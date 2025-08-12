@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home Value & Net Proceeds (Free, Instant) · MyNetProceeds</title>
+<meta name="description" content="Free, instant home value estimate and net proceeds calculator. See what your house is worth and your potential take-home after selling." />
+<style>
+  :root{--bg:#0f172a;--card:#fff;--muted:#6b7280;--pri:#2563eb;--ring:0 0 0 3px rgba(37,99,235,.25)}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;margin:0;background:#f7f7f7;color:#0f172a}
+  .wrap{max-width:980px;margin:0 auto;padding:18px}
+  header{background:#0f172a;color:#fff;padding:18px}
+  header h1{margin:0;font-size:20px}
+  header p{margin:6px 0 0;color:#cbd5e1;font-size:13px}
+  .grid{display:grid;gap:12px}
+  @media(min-width:960px){.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}}
+  .card{background:var(--card);border-radius:12px;box-shadow:0 6px 28px rgba(2,6,23,.06);padding:14px}
+  label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}
+  input,select{width:100%;padding:11px;border:1px solid #e5e7eb;border-radius:10px;font-size:15px;background:#fff}
+  input:focus,select:focus{outline:none;box-shadow:var(--ring);border-color:#bfdbfe}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .kpi{background:linear-gradient(180deg,#fff,#f1f5f9);border:1px solid #e5e7eb;border-radius:12px;padding:14px}
+  .kpi .big{font-size:26px;font-weight:800}
+  .ads{height:90px;border:1px dashed #cbd5e1;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:12px}
+  .pill{display:inline-flex;align-items:center;gap:6px;background:#eef2ff;color:#3730a3;padding:6px 10px;border-radius:999px;font-size:12px}
+  .muted{color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;background:var(--pri);color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer}
+  .btn.secondary{background:#e2e8f0;color:#0f172a}
+  .sticky{position:sticky;bottom:0;background:#ffffffcc;backdrop-filter:saturate(180%) blur(8px);border-top:1px solid #e5e7eb;padding:10px;display:flex;justify-content:space-between;align-items:center;z-index:50}
+  .q{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#e0e7ff;color:#3730a3;font-weight:800;font-size:12px;margin-left:6px;cursor:help;position:relative}
+  .q[data-tip]:hover::after{content:attr(data-tip);position:absolute;left:50%;transform:translateX(-50%);bottom:125%;background:#111827;color:#fff;padding:8px 10px;border-radius:8px;white-space:normal;width:min(300px,80vw);font-size:12px;line-height:1.3;box-shadow:0 8px 26px rgba(2,6,23,.3)}
+  .q[data-tip]:hover::before{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:115%;border:6px solid transparent;border-top-color:#111827}
+  .foot{font-size:12px;color:#6b7280;margin-top:8px}
+  @media print{
+    header,.sticky,.ads{display:none}
+    body{background:#fff}
+    .wrap{max-width:none}
+    .card{box-shadow:none;border:1px solid #e5e7eb}
+    .kpi .big{font-size:30px}
+    .page-break{page-break-before:always}
+  }
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand img{height:28px}
+  a{color:#2563eb}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img src="/assets/logo.svg" alt="MyNetProceeds logo"/>
+    <div>
+      <h1>MyNetProceeds — Home Value & Net Proceeds</h1>
+      <p>Get a quick home value estimate and see your potential take-home after commissions, closing costs, repairs, and taxes.</p>
+    </div>
+  </div>
+</header>
+<div class="wrap layout">
+  <!-- LEFT: Inputs -->
+  <section class="card grid" id="inputs">
+    <div class="row">
+      <label>Address (optional)
+        <span class="q" data-tip="Street + city helps with context for your estimate. Not stored in this demo.">?</span>
+        <input id="addr" type="text" placeholder="123 Main St, City" />
+      </label>
+      <label>ZIP (optional)
+        <input id="zip" inputmode="numeric" maxlength="10" placeholder="94109" />
+      </label>
+    </div>
+    <div class="row">
+      <label>State
+        <span class="q" data-tip="Used for average $/sqft and a simple state income-tax estimate.">?</span>
+        <select id="state"></select>
+      </label>
+      <label>Square Footage
+        <span class="q" data-tip="Interior living area in square feet. This drives the auto-estimate when value is blank.">?</span>
+        <input id="sqft" type="number" min="0" step="1" placeholder="1600" />
+      </label>
+    </div>
+    <div class="row">
+      <label>Estimated Home Value ($)
+        <span class="q" data-tip="If you know your expected sale price, enter it. Otherwise leave blank to auto-estimate.">?</span>
+        <input id="homeValue" type="number" placeholder="Leave blank to auto-estimate" />
+      </label>
+      <label>Condition
+        <span class="q" data-tip="Adjusts the value estimate. Turn-key tends to sell above average; major repairs below.">?</span>
+        <select id="condition">
+          <option value="0.12">Turn-key (Move-in Ready) +12%</option>
+          <option value="0.08">Updated +8%</option>
+          <option value="0">Average 0%</option>
+          <option value="-0.07">Needs Work −7%</option>
+          <option value="-0.15">Significant Repairs −15%</option>
+          <option value="-0.25">Major Repairs −25%</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="row">
+      <label>Commission %
+        <span class="q" data-tip="Total listing + buyer-agent commission. You can change this.">?</span>
+        <input id="commission" type="number" step="0.1" value="5.5" />
+      </label>
+      <label>Closing Costs % (other)
+        <span class="q" data-tip="Title, escrow, transfer/recording fees, etc. Often 1–3%.">?</span>
+        <input id="closing" type="number" step="0.1" value="1.5" />
+      </label>
+    </div>
+
+    <div class="row">
+      <label>Mortgage Payoff ($)
+        <span class="q" data-tip="What you still owe on the loan(s). Subtracted from sale proceeds at closing.">?</span>
+        <input id="mortgage" type="number" step="1" value="0" />
+      </label>
+      <label>Repair / Prep Costs ($)
+        <span class="q" data-tip="Cash you’ll spend before selling (e.g., paint, roof, staging). Subtracted from your take-home; this is separate from depreciation.">?</span>
+        <input id="repairs" type="number" step="1" value="0" />
+      </label>
+    </div>
+
+    <div class="row">
+      <label>Improvements (adds to basis, $)
+        <span class="q" data-tip="Capital improvements that increase value (e.g., addition). These raise your cost basis and can reduce taxable gain.">?</span>
+        <input id="improve" type="number" step="1" value="0" />
+      </label>
+      <label>Cash Offer % of Market Value
+        <span class="q" data-tip="Quick sale to a cash buyer is typically 75–85% of market value depending on condition and timeline.">?</span>
+        <input id="cashPct" type="number" step="1" value="80" />
+      </label>
+    </div>
+
+    <details>
+      <summary style="font-weight:800">Advanced tax options</summary>
+      <div class="row" style="margin-top:8px">
+        <label>Property Type
+          <span class="q" data-tip="Primary residence may qualify for a $250k/$500k capital-gains exclusion. Rentals/investments may trigger depreciation recapture.">?</span>
+          <select id="ptype">
+            <option>Primary residence</option>
+            <option>Second home</option>
+            <option>Rental / Investment</option>
+          </select>
+        </label>
+        <label>Filing Status
+          <select id="filing">
+            <option>Single</option>
+            <option>Married filing jointly</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>Original Purchase Price ($)
+          <span class="q" data-tip="Used to compute gain and estimate depreciation if rented.">?</span>
+          <input id="purchase" type="number" step="1" value="0" />
+        </label>
+        <label>Years Owned
+          <input id="years" type="number" step="0.1" value="5" />
+        </label>
+      </div>
+      <div class="row">
+        <label>Years Rented (if any)
+          <span class="q" data-tip="If this was a rental at any point, we can estimate depreciation from this.">?</span>
+          <input id="yearsRented" type="number" step="0.5" value="0" />
+        </label>
+        <label>Land Value %
+          <span class="q" data-tip="We don’t depreciate land. If unknown, 20% of purchase price is a common placeholder.">?</span>
+          <input id="landPct" type="number" step="1" value="20" />
+        </label>
+      </div>
+      <div class="row">
+        <label>Depreciation Claimed ($)
+          <span class="q" data-tip="Only for rentals/investments: prior depreciation deductions you took. If blank, we’ll auto-estimate using straight-line (27.5 yrs). This is not repair costs.">?</span>
+          <input id="depr" type="number" step="1" placeholder="leave blank to auto-estimate" />
+        </label>
+        <label>Estimated Annual Income ($)
+          <span class="q" data-tip="Used to determine your federal long-term capital-gains rate (0%/15%/20%).">?</span>
+          <input id="income" type="number" step="1000" value="100000" />
+        </label>
+      </div>
+      <div class="row">
+        <label>State Income Tax % (override)
+          <span class="q" data-tip="Override our simple state default if you know your effective rate.">?</span>
+          <input id="stateTaxOverride" type="number" step="0.1" placeholder="auto" />
+        </label>
+        <label class="row" style="align-items:center;gap:8px;margin:0">
+          <input id="twoOfFive" type="checkbox" checked /> <span style="align-self:center">I lived here 2 of the last 5 years (primary residence exclusion)</span>
+        </label>
+      </div>
+    </details>
+
+    <div class="row" style="margin-top:8px">
+      <button class="btn" id="calcBtn">Calculate</button>
+      <button class="btn secondary" id="pdfBtn">Download PDF</button>
+    </div>
+    <div class="ads">Ad placement (responsive banner)</div>
+  </section>
+
+  <!-- RIGHT: KPIs & breakdown -->
+  <section class="grid">
+    <div class="card kpi">
+      <div class="muted" style="font-size:12px">Estimated Take-Home</div>
+      <div class="big" id="netOut">$0</div>
+      <div class="muted" id="netPct">&nbsp;</div>
+    </div>
+
+    <div class="card">
+      <div style="font-weight:800;margin-bottom:8px">Home Value & Cash Offer</div>
+      <div class="grid">
+        <div><strong id="estValue">—</strong> <span class="muted">(range <span id="estRange">—</span>)</span> <span id="estBadge" class="pill">Heuristic</span></div>
+        <div class="muted">Automated estimate based on state avg $/sqft × your sqft × condition, or AVM when available. Not an appraisal.</div>
+        <div class="row">
+          <div>
+            <div class="muted">Avg $/sqft (state)</div>
+            <div id="pps">—</div>
+          </div>
+          <div>
+            <div class="muted">Condition factor</div>
+            <div id="cond">0%</div>
+          </div>
+        </div>
+        <hr style="border:none;border-top:1px solid #e5e7eb"/>
+        <div class="row">
+          <div>
+            <label>Cash Offer % of Market Value
+              <span class="q" data-tip="Quick sale to a cash buyer is typically 75–85% of market value depending on condition and timeline.">?</span>
+              <input id="cashPct" type="number" step="1" value="80" />
+            </label>
+          </div>
+          <div>
+            <div class="muted">Cash offer estimate</div>
+            <div style="font-weight:800" id="cashOffer">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-weight:800;margin-bottom:8px">Breakdown</div>
+      <div class="grid" id="breakdown"></div>
+      <div class="foot">Repairs/prep are immediate costs. <strong>Depreciation recapture</strong> is a tax on prior depreciation claimed for rentals/investments (assumed at 25%).</div>
+    </div>
+
+    <details class="card">
+      <summary style="font-weight:800">Assumptions & Disclaimers</summary>
+      <div class="foot" style="margin-top:6px">
+        <p><strong>Not tax, legal, or appraisal advice.</strong> This tool provides simplified estimates for educational purposes only. Automated values are not appraisals. Actual taxes and closing costs vary by jurisdiction and by your individual situation. Consult licensed professionals.</p>
+        <p><strong>Valuation method.</strong> If you leave value blank, we estimate: state average $/sqft × your sqft × condition factor, then show a ±8% range. If address + ZIP are provided, we try an AVM (beta) for a more precise estimate.</p>
+        <p><strong>Taxes.</strong> Federal long-term capital gains bands (0%/15%/20%) are approximated from your income and filing status. State tax uses a simple state default unless you override. If rental/investment and depreciation exists, recapture is estimated at 25% of prior depreciation.</p>
+        <p><strong>Primary residence exclusion.</strong> If you lived in the home 2 of the last 5 years, we apply a $250k (Single) / $500k (MFJ) exclusion to estimated gain.</p>
+        <p><strong>Privacy.</strong> Address is optional and not stored in this MVP.</p>
+        <p>See our <a href="/legal/privacy.html">Privacy Policy</a>, <a href="/legal/terms.html">Terms</a>, and <a href="/legal/disclaimer.html">Disclaimer</a>.</p>
+      </div>
+    </details>
+
+    <div class="ads card">Ad placement (in-content native)</div>
+  </section>
+</div>
+
+<div class="sticky">
+  <div>
+    <div class="muted" style="font-size:12px">Estimated Take-Home</div>
+    <div style="font-weight:900;font-size:18px" id="stickyNet">$0</div>
+  </div>
+  <div style="display:flex;gap:8px">
+    <button class="btn secondary" id="shareBtn">Share</button>
+    <button class="btn" id="calcBtn2">Recalculate</button>
+  </div>
+</div>
+
+<script>
+  // Fetch state data at runtime
+  let STATE_DATA = {};
+  fetch('/data/state_data.json').then(r=>r.json()).then(d=>{ STATE_DATA=d; init(); });
+
+  async function getAVMEstimate({ address, zip, state, sqft, conditionFactor }){
+    try{
+      const res = await fetch('/.netlify/functions/estimate', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ address, zip, state, sqft, conditionFactor })
+      });
+      if(!res.ok) throw new Error('AVM unavailable');
+      const data = await res.json();
+      return data.estimate || 0;
+    }catch(e){
+      return 0;
+    }
+  }
+
+  function fmt(n){return isNaN(n)?'—':n.toLocaleString(undefined,{maximumFractionDigits:0})}
+
+  async function computeEstimate(){
+    const st = document.getElementById('state').value;
+    const sqft = parseFloat(document.getElementById('sqft').value)||0;
+    const cond = parseFloat(document.getElementById('condition').value)||0;
+    const pps = STATE_DATA[st]?.pps||250;
+    const address = document.getElementById('addr').value.trim();
+    const zip = document.getElementById('zip').value.trim();
+
+    let estimate = 0; let badge = 'Heuristic';
+
+    if(address && zip){
+      try{
+        estimate = await getAVMEstimate({ address, zip, state: st, sqft, conditionFactor: cond });
+        if(estimate>0) badge = 'AVM (beta)';
+      }catch(_){}
+    }
+
+    if(!estimate){
+      if(sqft>0){ estimate = pps * sqft * (1+cond); }
+    }
+
+    const low = estimate*0.92, high=estimate*1.08;
+    document.getElementById('pps').innerText = `$${fmt(pps)}/sqft`;
+    document.getElementById('cond').innerText = `${(cond*100).toFixed(0)}%`;
+    document.getElementById('estBadge').innerText = badge;
+
+    if(estimate>0){
+      document.getElementById('estValue').innerHTML = `<span class="pill">Estimate</span> $${fmt(estimate)}`;
+      document.getElementById('estRange').innerText = `$${fmt(low)} – $${fmt(high)}`;
+    } else {
+      document.getElementById('estValue').innerText = 'Enter sqft (and pick a state)';
+      document.getElementById('estRange').innerText = '—';
+    }
+
+    const cashPct = (parseFloat(document.getElementById('cashPct').value)||80)/100;
+    document.getElementById('cashOffer').innerText = estimate? `$${fmt(estimate*cashPct)}` : '—';
+    return estimate;
+  }
+
+  function cgtRate(income, filing){
+    const S=[0,47025,518900], M=[0,94050,583750];
+    const b = filing==='Married filing jointly'?M:S;
+    if(income<=b[1])return 0; if(income<=b[2])return .15; return .20;
+  }
+
+  async function calc(){
+    const manual = parseFloat(document.getElementById('homeValue').value);
+    const auto = await computeEstimate();
+    const salePrice = (manual>0? manual : auto) || 0;
+
+    const commission = salePrice * ((parseFloat(document.getElementById('commission').value)||0)/100);
+    const closing = salePrice * ((parseFloat(document.getElementById('closing').value)||0)/100);
+    const mortgage = parseFloat(document.getElementById('mortgage').value)||0;
+    const repairs = parseFloat(document.getElementById('repairs').value)||0;
+
+    const ptype = document.getElementById('ptype')? document.getElementById('ptype').value : 'Primary residence';
+    const filing = document.getElementById('filing')? document.getElementById('filing').value : 'Single';
+    const purchase = parseFloat(document.getElementById('purchase')? document.getElementById('purchase').value : 0)||0;
+    const income = parseFloat(document.getElementById('income')? document.getElementById('income').value : 0)||0;
+    const twoOfFive = document.getElementById('twoOfFive')? document.getElementById('twoOfFive').checked : true;
+    const state = document.getElementById('state').value;
+    const stTax = (STATE_DATA[state]?.tax||0)/100;
+    const stOverride = parseFloat(document.getElementById('stateTaxOverride')? document.getElementById('stateTaxOverride').value : NaN);
+
+    const improve = parseFloat(document.getElementById('improve').value)||0;
+    let gain = Math.max(salePrice - (purchase + improve), 0);
+
+    const yearsRented = parseFloat(document.getElementById('yearsRented')? document.getElementById('yearsRented').value : 0)||0;
+    const landPct = parseFloat(document.getElementById('landPct')? document.getElementById('landPct').value : 20)||20;
+    let depr = parseFloat(document.getElementById('depr')? document.getElementById('depr').value : NaN);
+    if(ptype!=='Primary residence'){
+      if(isNaN(depr)||depr<=0){ const depreciable = Math.max(purchase * (1 - landPct/100), 0); depr = (depreciable/27.5) * Math.max(yearsRented,0); }
+    } else { depr = 0; }
+    const recapture = depr>0 ? depr*0.25 : 0;
+
+    let exclusion = 0; if(ptype==='Primary residence' && twoOfFive){ exclusion = filing==='Married filing jointly'?500000:250000; }
+
+    const taxableGain = Math.max(gain - exclusion - (depr||0), 0);
+    const fed = taxableGain * cgtRate(income, filing);
+    const statePct = isNaN(stOverride)? stTax : (stOverride/100);
+    const stateTax = taxableGain * statePct;
+
+    const taxes = fed + stateTax + recapture;
+    const net = salePrice - commission - closing - mortgage - repairs - taxes;
+    const netPct = salePrice>0 ? (net/salePrice)*100 : 0;
+
+    document.getElementById('netOut').innerText = `$${fmt(Math.max(net,0))}`;
+    document.getElementById('netPct').innerText = salePrice>0 ? `${netPct.toFixed(1)}% of sale price` : '';
+    document.getElementById('stickyNet').innerText = `$${fmt(Math.max(net,0))}`;
+
+    const rows = [
+      ['Sale price', salePrice],
+      ['Commission', -commission],
+      ['Other closing', -closing],
+      ['Repairs / prep', -repairs],
+      ['Mortgage payoff', -mortgage],
+      ['Depreciation recapture (est.)', -recapture],
+      ['Federal capital gains (est.)', -fed],
+      ['State tax (est.)', -stateTax],
+      ['Net proceeds', net]
+    ];
+    document.getElementById('breakdown').innerHTML = rows.map(([label,val],i)=>{
+      const isNet = i===rows.length-1;
+      const cls = isNet? 'style="font-weight:800"' : '';
+      const sign = val<0? ' style="color:#dc2626"' : (isNet? ' style="color:#16a34a"' : '');
+      return `<div class="row" ${cls}><div>${label}</div><div style="text-align:right"${sign}>$${fmt(Math.abs(val))}</div></div>`
+    }).join('');
+  }
+
+  function bind(){
+    ['addr','zip','homeValue','state','sqft','condition','commission','closing','mortgage','repairs','improve','ptype','filing','purchase','years','yearsRented','landPct','depr','income','stateTaxOverride','twoOfFive','cashPct']
+      .forEach(id=>{ const el=document.getElementById(id); if(el){ el.addEventListener('input', ()=>{ calc(); }); }});
+    document.getElementById('calcBtn').addEventListener('click', e=>{e.preventDefault(); calc(); scrollTo({top:0,behavior:'smooth'});});
+    document.getElementById('calcBtn2').addEventListener('click', e=>{e.preventDefault(); calc();});
+    document.getElementById('pdfBtn').addEventListener('click', ()=>{
+      const orig = document.title;
+      const addr = document.getElementById('addr').value.trim();
+      if(addr) document.title = `Home-Estimate-and-Net-Proceeds-${addr.replace(/\\s+/g,'-')}`;
+      window.print();
+      setTimeout(()=>{ document.title = orig; }, 500);
+    });
+    document.getElementById('shareBtn').addEventListener('click', async ()=>{ try{ await navigator.clipboard.writeText(location.href); alert('Link copied to clipboard'); } catch{ alert('Copy this page URL to share your results.'); }});
+  }
+
+  function init(){
+    const sel = document.getElementById('state');
+    sel.innerHTML = Object.keys(STATE_DATA).map(s=>`<option value="${s}">${s}</option>`).join('');
+    sel.value = 'CA';
+    bind();
+    calc();
+  }
+</script>
+</body>
+</html>
