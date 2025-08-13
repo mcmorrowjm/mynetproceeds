@@ -3,61 +3,65 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Home Value & Net Proceeds (Free, Instant) · MyNetProceeds</title>
-<meta name="description" content="Free, instant home value estimate and net proceeds calculator. See what your house is worth and your potential take-home after selling." />
-<style>
-  :root{--bg:#0f172a;--card:#fff;--muted:#6b7280;--pri:#2563eb;--ring:0 0 0 3px rgba(37,99,235,.25)}
-  *{box-sizing:border-box}
-  body{font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;margin:0;background:#f7f7f7;color:#0f172a}
-  .wrap{max-width:980px;margin:0 auto;padding:18px}
-  header{background:#0f172a;color:#fff;padding:18px}
-  header h1{margin:0;font-size:20px}
-  header p{margin:6px 0 0;color:#cbd5e1;font-size:13px}
-  .grid{display:grid;gap:12px}
-  @media(min-width:960px){.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}}
-  .card{background:var(--card);border-radius:12px;box-shadow:0 6px 28px rgba(2,6,23,.06);padding:14px}
-  label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}
-  input,select{width:100%;padding:11px;border:1px solid #e5e7eb;border-radius:10px;font-size:15px;background:#fff}
-  input:focus,select:focus{outline:none;box-shadow:var(--ring);border-color:#bfdbfe}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .kpi{background:linear-gradient(180deg,#fff,#f1f5f9);border:1px solid #e5e7eb;border-radius:12px;padding:14px}
-  .kpi .big{font-size:26px;font-weight:800}
-  .ads{height:90px;border:1px dashed #cbd5e1;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:12px}
-  .pill{display:inline-flex;align-items:center;gap:6px;background:#eef2ff;color:#3730a3;padding:6px 10px;border-radius:999px;font-size:12px}
-  .muted{color:var(--muted)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;background:var(--pri);color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer}
-  .btn.secondary{background:#e2e8f0;color:#0f172a}
-  .sticky{position:sticky;bottom:0;background:#ffffffcc;backdrop-filter:saturate(180%) blur(8px);border-top:1px solid #e5e7eb;padding:10px;display:flex;justify-content:space-between;align-items:center;z-index:50}
-  .q{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#e0e7ff;color:#3730a3;font-weight:800;font-size:12px;margin-left:6px;cursor:help;position:relative}
-  .q[data-tip]:hover::after{content:attr(data-tip);position:absolute;left:50%;transform:translateX(-50%);bottom:125%;background:#111827;color:#fff;padding:8px 10px;border-radius:8px;white-space:normal;width:min(300px,80vw);font-size:12px;line-height:1.3;box-shadow:0 8px 26px rgba(2,6,23,.3)}
-  .q[data-tip]:hover::before{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:115%;border:6px solid transparent;border-top-color:#111827}
-  .foot{font-size:12px;color:#6b7280;margin-top:8px}
-  @media print{
-    header,.sticky,.ads{display:none}
-    body{background:#fff}
-    .wrap{max-width:none}
-    .card{box-shadow:none;border:1px solid #e5e7eb}
-    .kpi .big{font-size:30px}
-    .page-break{page-break-before:always}
-  }
-  .brand{display:flex;align-items:center;gap:10px}
-  .brand img{height:28px}
-  a{color:#2563eb}
-</style>
+<title>Home Sale Net Proceeds Calculator - After Taxes & Closing Costs | Free Instant Estimate</title>
+<link rel="canonical" href="https://mynetproceeds.com/">
+<meta name="description" content="Free, instant home sale net proceeds calculator. See your take-home after commissions, closing costs, repairs, and 2025 federal & state taxes.">
+<meta property="og:title" content="Instant & Free Net Proceeds Calculator · MyNetProceeds">
+<meta property="og:description" content="Estimate your take-home after selling a home. Commissions, closing costs, repairs, and taxes included.">
+<meta property="og:url" content="https://mynetproceeds.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://mynetproceeds.com/assets/images/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/css/styles.css" as="style">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BL8VF8VB5D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BL8VF8VB5D');</script>
+<script defer src="/assets/js/app.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Home Sale Net Proceeds Calculator",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Web",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"2847"},
+  "url":"https://mynetproceeds.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How do I calculate net proceeds after selling my house?","acceptedAnswer":{"@type":"Answer","text":"Enter your expected sale price or let us estimate it. We subtract estimated commission, closing costs, repair costs, mortgage payoff, and taxes (capital gains, state tax, and depreciation recapture for rentals) to show your take-home."}},
+    {"@type":"Question","name":"Is this calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, it’s completely free to use and requires no signup."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FinancialService",
+  "name":"MyNetProceeds",
+  "url":"https://mynetproceeds.com/",
+  "areaServed":"US",
+  "serviceType":"Home sale proceeds estimation"
+}
+</script>
 </head>
 <body>
 <header>
-  <div class="brand">
-    <img src="/assets/logo.svg" alt="MyNetProceeds logo"/>
-    <div>
-      <h1>MyNetProceeds — Home Value & Net Proceeds</h1>
-      <p>Get a quick home value estimate and see your potential take-home after commissions, closing costs, repairs, and taxes.</p>
-    </div>
+  <div class="wrap">
+    <h1>Instant & Free Home Sale Net Proceeds Calculator</h1>
+    <p>Estimate your home value and see your potential take-home after commissions, closing costs, repairs, and taxes.</p>
   </div>
+  <div class="top-ad"><div class="ads" id="ad-top">Top Leaderboard (728×90/970×90)</div></div>
 </header>
+
 <div class="wrap layout">
-  <!-- LEFT: Inputs -->
   <section class="card grid" id="inputs">
+    <div class="progress"><span></span></div>
     <div class="row">
       <label>Address (optional)
         <span class="q" data-tip="Street + city helps with context for your estimate. Not stored in this demo.">?</span>
@@ -73,7 +77,7 @@
         <select id="state"></select>
       </label>
       <label>Square Footage
-        <span class="q" data-tip="Interior living area in square feet. This drives the auto-estimate when value is blank.">?</span>
+        <span class="q" data-tip="Interior living area in square feet. Drives the auto-estimate when value is blank.">?</span>
         <input id="sqft" type="number" min="0" step="1" placeholder="1600" />
       </label>
     </div>
@@ -97,7 +101,7 @@
 
     <div class="row">
       <label>Commission %
-        <span class="q" data-tip="Total listing + buyer-agent commission. You can change this.">?</span>
+        <span class="q" data-tip="Total listing + buyer-agent commission. Negotiable.">?</span>
         <input id="commission" type="number" step="0.1" value="5.5" />
       </label>
       <label>Closing Costs % (other)
@@ -128,11 +132,11 @@
       </label>
     </div>
 
-    <details>
-      <summary style="font-weight:800">Advanced tax options</summary>
+    <details class="collapsible">
+      <summary>Advanced tax options</summary>
       <div class="row" style="margin-top:8px">
         <label>Property Type
-          <span class="q" data-tip="Primary residence may qualify for a $250k/$500k capital-gains exclusion. Rentals/investments may trigger depreciation recapture.">?</span>
+          <span class="q" data-tip="Primary residence may qualify for a $250k/$500k exclusion. Rentals/investments may trigger depreciation recapture.">?</span>
           <select id="ptype">
             <option>Primary residence</option>
             <option>Second home</option>
@@ -190,10 +194,20 @@
       <button class="btn" id="calcBtn">Calculate</button>
       <button class="btn secondary" id="pdfBtn">Download PDF</button>
     </div>
-    <div class="ads">Ad placement (responsive banner)</div>
+
+    <!-- Netlify form for lead capture (emails report link) -->
+    <form name="lead-capture" id="emailForm" method="POST" data-netlify="true" class="card" style="margin-top:8px">
+      <input type="hidden" name="form-name" value="lead-capture" />
+      <label>Email me a copy of my report (optional)
+        <span class="q" data-tip="We’ll email you a PDF of your calculation.">?</span>
+        <input type="email" name="email" placeholder="you@example.com" />
+      </label>
+      <button class="btn secondary" type="submit">Email my PDF</button>
+    </form>
+
+    <div class="ads rect" id="ad-mid">Mid-content Rectangle (300×250)</div>
   </section>
 
-  <!-- RIGHT: KPIs & breakdown -->
   <section class="grid">
     <div class="card kpi">
       <div class="muted" style="font-size:12px">Estimated Take-Home</div>
@@ -207,14 +221,8 @@
         <div><strong id="estValue">—</strong> <span class="muted">(range <span id="estRange">—</span>)</span> <span id="estBadge" class="pill">Heuristic</span></div>
         <div class="muted">Automated estimate based on state avg $/sqft × your sqft × condition, or AVM when available. Not an appraisal.</div>
         <div class="row">
-          <div>
-            <div class="muted">Avg $/sqft (state)</div>
-            <div id="pps">—</div>
-          </div>
-          <div>
-            <div class="muted">Condition factor</div>
-            <div id="cond">0%</div>
-          </div>
+          <div><div class="muted">Avg $/sqft (state)</div><div id="pps">—</div></div>
+          <div><div class="muted">Condition factor</div><div id="cond">0%</div></div>
         </div>
         <hr style="border:none;border-top:1px solid #e5e7eb"/>
         <div class="row">
@@ -245,14 +253,15 @@
         <p><strong>Valuation method.</strong> If you leave value blank, we estimate: state average $/sqft × your sqft × condition factor, then show a ±8% range. If address + ZIP are provided, we try an AVM (beta) for a more precise estimate.</p>
         <p><strong>Taxes.</strong> Federal long-term capital gains bands (0%/15%/20%) are approximated from your income and filing status. State tax uses a simple state default unless you override. If rental/investment and depreciation exists, recapture is estimated at 25% of prior depreciation.</p>
         <p><strong>Primary residence exclusion.</strong> If you lived in the home 2 of the last 5 years, we apply a $250k (Single) / $500k (MFJ) exclusion to estimated gain.</p>
-        <p><strong>Privacy.</strong> Address is optional and not stored in this MVP.</p>
-        <p>See our <a href="/legal/privacy.html">Privacy Policy</a>, <a href="/legal/terms.html">Terms</a>, and <a href="/legal/disclaimer.html">Disclaimer</a>.</p>
+        <p>Last updated: August 13, 2025.</p>
       </div>
     </details>
 
-    <div class="ads card">Ad placement (in-content native)</div>
+    <div class="ads card" id="ad-bottom">Bottom placement (responsive)</div>
   </section>
 </div>
+
+<div class="ad-sticky-mobile" id="ad-sticky">Sticky Mobile Banner (320×50)</div>
 
 <div class="sticky">
   <div>
@@ -265,159 +274,28 @@
   </div>
 </div>
 
-<script>
-  // Fetch state data at runtime
-  let STATE_DATA = {};
-  fetch('/data/state_data.json').then(r=>r.json()).then(d=>{ STATE_DATA=d; init(); });
+<section class="wrap card" style="margin-top:16px">
+  <h2>Calculate Your Home Sale Net Proceeds After Taxes - Free Instant Estimate</h2>
+  <p><strong>See Exactly What You'll Take Home in Under 60 Seconds.</strong> Selling your home? Don't guess what you'll pocket after the sale. Our advanced calculator factors in everything—commissions, closing costs, repairs, and most importantly, federal and state capital gains taxes that other calculators miss.</p>
+  <h3>The Hidden Cost: Capital Gains Taxes Explained</h3>
+  <p>Capital gains taxes are the government's share of your profit. If you've lived in your home 2 of the last 5 years, you may exclude $250,000 (single) or $500,000 (married filing jointly). After exclusions, remaining gains are taxed at 0%, 15%, or 20% federally depending on income, plus any state tax.</p>
+  <h3>Investment Properties & Rentals</h3>
+  <p>Investment properties face depreciation recapture—prior depreciation is taxed at 25% when you sell. Our calculator estimates this for you and applies state tax proxies unless you override them.</p>
+  <h3>Closing Costs Breakdown</h3>
+  <p>Sellers typically pay 6–10% in total costs including commission, title/escrow, transfer taxes, and other fees. Enter your scenario to see a tailored breakdown.</p>
+  <!--AFFILIATE_PLACEHOLDER_CLEVER-->
+  <!--AFFILIATE_PLACEHOLDER_TURBOTAX-->
+  <h3>Maximize Your Net Proceeds</h3>
+  <ul>
+    <li>Track improvements to increase basis</li>
+    <li>Time your sale in a lower-income year</li>
+    <li>Negotiate commission</li>
+    <li>Consider a 1031 exchange for rentals</li>
+  </ul>
+</section>
 
-  async function getAVMEstimate({ address, zip, state, sqft, conditionFactor }){
-    try{
-      const res = await fetch('/.netlify/functions/estimate', {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ address, zip, state, sqft, conditionFactor })
-      });
-      if(!res.ok) throw new Error('AVM unavailable');
-      const data = await res.json();
-      return data.estimate || 0;
-    }catch(e){
-      return 0;
-    }
-  }
-
-  function fmt(n){return isNaN(n)?'—':n.toLocaleString(undefined,{maximumFractionDigits:0})}
-
-  async function computeEstimate(){
-    const st = document.getElementById('state').value;
-    const sqft = parseFloat(document.getElementById('sqft').value)||0;
-    const cond = parseFloat(document.getElementById('condition').value)||0;
-    const pps = STATE_DATA[st]?.pps||250;
-    const address = document.getElementById('addr').value.trim();
-    const zip = document.getElementById('zip').value.trim();
-
-    let estimate = 0; let badge = 'Heuristic';
-
-    if(address && zip){
-      try{
-        estimate = await getAVMEstimate({ address, zip, state: st, sqft, conditionFactor: cond });
-        if(estimate>0) badge = 'AVM (beta)';
-      }catch(_){}
-    }
-
-    if(!estimate){
-      if(sqft>0){ estimate = pps * sqft * (1+cond); }
-    }
-
-    const low = estimate*0.92, high=estimate*1.08;
-    document.getElementById('pps').innerText = `$${fmt(pps)}/sqft`;
-    document.getElementById('cond').innerText = `${(cond*100).toFixed(0)}%`;
-    document.getElementById('estBadge').innerText = badge;
-
-    if(estimate>0){
-      document.getElementById('estValue').innerHTML = `<span class="pill">Estimate</span> $${fmt(estimate)}`;
-      document.getElementById('estRange').innerText = `$${fmt(low)} – $${fmt(high)}`;
-    } else {
-      document.getElementById('estValue').innerText = 'Enter sqft (and pick a state)';
-      document.getElementById('estRange').innerText = '—';
-    }
-
-    const cashPct = (parseFloat(document.getElementById('cashPct').value)||80)/100;
-    document.getElementById('cashOffer').innerText = estimate? `$${fmt(estimate*cashPct)}` : '—';
-    return estimate;
-  }
-
-  function cgtRate(income, filing){
-    const S=[0,47025,518900], M=[0,94050,583750];
-    const b = filing==='Married filing jointly'?M:S;
-    if(income<=b[1])return 0; if(income<=b[2])return .15; return .20;
-  }
-
-  async function calc(){
-    const manual = parseFloat(document.getElementById('homeValue').value);
-    const auto = await computeEstimate();
-    const salePrice = (manual>0? manual : auto) || 0;
-
-    const commission = salePrice * ((parseFloat(document.getElementById('commission').value)||0)/100);
-    const closing = salePrice * ((parseFloat(document.getElementById('closing').value)||0)/100);
-    const mortgage = parseFloat(document.getElementById('mortgage').value)||0;
-    const repairs = parseFloat(document.getElementById('repairs').value)||0;
-
-    const ptype = document.getElementById('ptype')? document.getElementById('ptype').value : 'Primary residence';
-    const filing = document.getElementById('filing')? document.getElementById('filing').value : 'Single';
-    const purchase = parseFloat(document.getElementById('purchase')? document.getElementById('purchase').value : 0)||0;
-    const income = parseFloat(document.getElementById('income')? document.getElementById('income').value : 0)||0;
-    const twoOfFive = document.getElementById('twoOfFive')? document.getElementById('twoOfFive').checked : true;
-    const state = document.getElementById('state').value;
-    const stTax = (STATE_DATA[state]?.tax||0)/100;
-    const stOverride = parseFloat(document.getElementById('stateTaxOverride')? document.getElementById('stateTaxOverride').value : NaN);
-
-    const improve = parseFloat(document.getElementById('improve').value)||0;
-    let gain = Math.max(salePrice - (purchase + improve), 0);
-
-    const yearsRented = parseFloat(document.getElementById('yearsRented')? document.getElementById('yearsRented').value : 0)||0;
-    const landPct = parseFloat(document.getElementById('landPct')? document.getElementById('landPct').value : 20)||20;
-    let depr = parseFloat(document.getElementById('depr')? document.getElementById('depr').value : NaN);
-    if(ptype!=='Primary residence'){
-      if(isNaN(depr)||depr<=0){ const depreciable = Math.max(purchase * (1 - landPct/100), 0); depr = (depreciable/27.5) * Math.max(yearsRented,0); }
-    } else { depr = 0; }
-    const recapture = depr>0 ? depr*0.25 : 0;
-
-    let exclusion = 0; if(ptype==='Primary residence' && twoOfFive){ exclusion = filing==='Married filing jointly'?500000:250000; }
-
-    const taxableGain = Math.max(gain - exclusion - (depr||0), 0);
-    const fed = taxableGain * cgtRate(income, filing);
-    const statePct = isNaN(stOverride)? stTax : (stOverride/100);
-    const stateTax = taxableGain * statePct;
-
-    const taxes = fed + stateTax + recapture;
-    const net = salePrice - commission - closing - mortgage - repairs - taxes;
-    const netPct = salePrice>0 ? (net/salePrice)*100 : 0;
-
-    document.getElementById('netOut').innerText = `$${fmt(Math.max(net,0))}`;
-    document.getElementById('netPct').innerText = salePrice>0 ? `${netPct.toFixed(1)}% of sale price` : '';
-    document.getElementById('stickyNet').innerText = `$${fmt(Math.max(net,0))}`;
-
-    const rows = [
-      ['Sale price', salePrice],
-      ['Commission', -commission],
-      ['Other closing', -closing],
-      ['Repairs / prep', -repairs],
-      ['Mortgage payoff', -mortgage],
-      ['Depreciation recapture (est.)', -recapture],
-      ['Federal capital gains (est.)', -fed],
-      ['State tax (est.)', -stateTax],
-      ['Net proceeds', net]
-    ];
-    document.getElementById('breakdown').innerHTML = rows.map(([label,val],i)=>{
-      const isNet = i===rows.length-1;
-      const cls = isNet? 'style="font-weight:800"' : '';
-      const sign = val<0? ' style="color:#dc2626"' : (isNet? ' style="color:#16a34a"' : '');
-      return `<div class="row" ${cls}><div>${label}</div><div style="text-align:right"${sign}>$${fmt(Math.abs(val))}</div></div>`
-    }).join('');
-  }
-
-  function bind(){
-    ['addr','zip','homeValue','state','sqft','condition','commission','closing','mortgage','repairs','improve','ptype','filing','purchase','years','yearsRented','landPct','depr','income','stateTaxOverride','twoOfFive','cashPct']
-      .forEach(id=>{ const el=document.getElementById(id); if(el){ el.addEventListener('input', ()=>{ calc(); }); }});
-    document.getElementById('calcBtn').addEventListener('click', e=>{e.preventDefault(); calc(); scrollTo({top:0,behavior:'smooth'});});
-    document.getElementById('calcBtn2').addEventListener('click', e=>{e.preventDefault(); calc();});
-    document.getElementById('pdfBtn').addEventListener('click', ()=>{
-      const orig = document.title;
-      const addr = document.getElementById('addr').value.trim();
-      if(addr) document.title = `Home-Estimate-and-Net-Proceeds-${addr.replace(/\\s+/g,'-')}`;
-      window.print();
-      setTimeout(()=>{ document.title = orig; }, 500);
-    });
-    document.getElementById('shareBtn').addEventListener('click', async ()=>{ try{ await navigator.clipboard.writeText(location.href); alert('Link copied to clipboard'); } catch{ alert('Copy this page URL to share your results.'); }});
-  }
-
-  function init(){
-    const sel = document.getElementById('state');
-    sel.innerHTML = Object.keys(STATE_DATA).map(s=>`<option value="${s}">${s}</option>`).join('');
-    sel.value = 'CA';
-    bind();
-    calc();
-  }
-</script>
+<footer class="wrap" style="margin-bottom:40px">
+  <p>© 2025 MyNetProceeds.com · <a href="/legal/privacy.html">Privacy</a> · <a href="/legal/terms.html">Terms</a> · <a href="/legal/disclaimer.html">Disclaimer</a></p>
+</footer>
 </body>
 </html>

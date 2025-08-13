@@ -1,202 +1,252 @@
 {
-  "AL": {
-    "pps": 145,
-    "tax": 5
+  "alabama": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 145
   },
-  "AK": {
-    "pps": 210,
-    "tax": 0
+  "alaska": {
+    "closing": 1.5,
+    "tax": 0.0,
+    "pps": 210
   },
-  "AZ": {
-    "pps": 275,
-    "tax": 2.8
+  "arizona": {
+    "closing": 1.8,
+    "tax": 2.8,
+    "pps": 275
   },
-  "AR": {
-    "pps": 140,
-    "tax": 5
+  "arkansas": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 140
   },
-  "CA": {
-    "pps": 500,
-    "tax": 9
+  "california": {
+    "closing": 2.0,
+    "tax": 9.0,
+    "pps": 500
   },
-  "CO": {
-    "pps": 330,
-    "tax": 4.4
+  "colorado": {
+    "closing": 1.8,
+    "tax": 4.4,
+    "pps": 330
   },
-  "CT": {
-    "pps": 280,
-    "tax": 5
+  "connecticut": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 280
   },
-  "DE": {
-    "pps": 215,
-    "tax": 5
+  "delaware": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 215
   },
-  "FL": {
-    "pps": 290,
-    "tax": 0
+  "florida": {
+    "closing": 1.7,
+    "tax": 0.0,
+    "pps": 290
   },
-  "GA": {
-    "pps": 200,
-    "tax": 4.5
+  "georgia": {
+    "closing": 1.8,
+    "tax": 4.5,
+    "pps": 200
   },
-  "HI": {
-    "pps": 700,
-    "tax": 7
+  "hawaii": {
+    "closing": 2.2,
+    "tax": 7.0,
+    "pps": 700
   },
-  "ID": {
-    "pps": 270,
-    "tax": 6
+  "idaho": {
+    "closing": 1.9,
+    "tax": 6.0,
+    "pps": 270
   },
-  "IL": {
-    "pps": 205,
-    "tax": 4.95
+  "illinois": {
+    "closing": 2.1,
+    "tax": 4.95,
+    "pps": 205
   },
-  "IN": {
-    "pps": 165,
-    "tax": 3.15
+  "indiana": {
+    "closing": 1.8,
+    "tax": 3.15,
+    "pps": 165
   },
-  "IA": {
-    "pps": 165,
-    "tax": 5
+  "iowa": {
+    "closing": 1.9,
+    "tax": 5.0,
+    "pps": 165
   },
-  "KS": {
-    "pps": 170,
-    "tax": 5.7
+  "kansas": {
+    "closing": 1.9,
+    "tax": 5.7,
+    "pps": 170
   },
-  "KY": {
-    "pps": 155,
-    "tax": 5
+  "kentucky": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 155
   },
-  "LA": {
-    "pps": 175,
-    "tax": 4.25
+  "louisiana": {
+    "closing": 2.0,
+    "tax": 4.25,
+    "pps": 175
   },
-  "ME": {
-    "pps": 255,
-    "tax": 7.15
+  "maine": {
+    "closing": 2.0,
+    "tax": 7.15,
+    "pps": 255
   },
-  "MD": {
-    "pps": 275,
-    "tax": 5.75
+  "maryland": {
+    "closing": 2.0,
+    "tax": 5.75,
+    "pps": 275
   },
-  "MA": {
-    "pps": 420,
-    "tax": 5
+  "massachusetts": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 420
   },
-  "MI": {
-    "pps": 165,
-    "tax": 4.25
+  "michigan": {
+    "closing": 1.8,
+    "tax": 4.25,
+    "pps": 165
   },
-  "MN": {
-    "pps": 220,
-    "tax": 6.8
+  "minnesota": {
+    "closing": 2.0,
+    "tax": 6.8,
+    "pps": 220
   },
-  "MS": {
-    "pps": 140,
-    "tax": 5
+  "mississippi": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 140
   },
-  "MO": {
-    "pps": 175,
-    "tax": 4.95
+  "missouri": {
+    "closing": 1.9,
+    "tax": 4.95,
+    "pps": 175
   },
-  "MT": {
-    "pps": 265,
-    "tax": 6.75
+  "montana": {
+    "closing": 1.8,
+    "tax": 6.75,
+    "pps": 265
   },
-  "NE": {
-    "pps": 175,
-    "tax": 5.8
+  "nebraska": {
+    "closing": 1.9,
+    "tax": 5.8,
+    "pps": 175
   },
-  "NV": {
-    "pps": 285,
-    "tax": 0
+  "nevada": {
+    "closing": 1.7,
+    "tax": 0.0,
+    "pps": 285
   },
-  "NH": {
-    "pps": 275,
-    "tax": 0
+  "new-hampshire": {
+    "closing": 1.8,
+    "tax": 0.0,
+    "pps": 275
   },
-  "NJ": {
-    "pps": 305,
-    "tax": 6.5
+  "new-jersey": {
+    "closing": 2.0,
+    "tax": 6.5,
+    "pps": 305
   },
-  "NM": {
-    "pps": 200,
-    "tax": 5
+  "new-mexico": {
+    "closing": 1.8,
+    "tax": 5.0,
+    "pps": 200
   },
-  "NY": {
-    "pps": 365,
-    "tax": 6.9
+  "new-york": {
+    "closing": 2.2,
+    "tax": 6.9,
+    "pps": 365
   },
-  "NC": {
-    "pps": 210,
-    "tax": 4.5
+  "north-carolina": {
+    "closing": 1.8,
+    "tax": 4.5,
+    "pps": 210
   },
-  "ND": {
-    "pps": 190,
-    "tax": 2.5
+  "north-dakota": {
+    "closing": 1.8,
+    "tax": 2.5,
+    "pps": 190
   },
-  "OH": {
-    "pps": 165,
-    "tax": 3.5
+  "ohio": {
+    "closing": 1.8,
+    "tax": 3.5,
+    "pps": 165
   },
-  "OK": {
-    "pps": 140,
-    "tax": 4.75
+  "oklahoma": {
+    "closing": 2.0,
+    "tax": 4.75,
+    "pps": 140
   },
-  "OR": {
-    "pps": 310,
-    "tax": 8.7
+  "oregon": {
+    "closing": 2.0,
+    "tax": 8.7,
+    "pps": 310
   },
-  "PA": {
-    "pps": 190,
-    "tax": 3.07
+  "pennsylvania": {
+    "closing": 2.0,
+    "tax": 3.07,
+    "pps": 190
   },
-  "RI": {
-    "pps": 275,
-    "tax": 5
+  "rhode-island": {
+    "closing": 2.0,
+    "tax": 5.0,
+    "pps": 275
   },
-  "SC": {
-    "pps": 205,
-    "tax": 5
+  "south-carolina": {
+    "closing": 1.9,
+    "tax": 5.0,
+    "pps": 205
   },
-  "SD": {
-    "pps": 195,
-    "tax": 0
+  "south-dakota": {
+    "closing": 1.7,
+    "tax": 0.0,
+    "pps": 195
   },
-  "TN": {
-    "pps": 225,
-    "tax": 0
+  "tennessee": {
+    "closing": 1.7,
+    "tax": 0.0,
+    "pps": 225
   },
-  "TX": {
-    "pps": 210,
-    "tax": 0
+  "texas": {
+    "closing": 1.7,
+    "tax": 0.0,
+    "pps": 210
   },
-  "UT": {
-    "pps": 310,
-    "tax": 4.85
+  "utah": {
+    "closing": 1.8,
+    "tax": 4.85,
+    "pps": 310
   },
-  "VT": {
-    "pps": 255,
-    "tax": 6.5
+  "vermont": {
+    "closing": 2.0,
+    "tax": 6.5,
+    "pps": 255
   },
-  "VA": {
-    "pps": 260,
-    "tax": 5.75
+  "virginia": {
+    "closing": 1.9,
+    "tax": 5.75,
+    "pps": 260
   },
-  "WA": {
-    "pps": 340,
-    "tax": 0
+  "washington": {
+    "closing": 1.9,
+    "tax": 0.0,
+    "pps": 340
   },
-  "WV": {
-    "pps": 145,
-    "tax": 5.12
+  "west-virginia": {
+    "closing": 2.0,
+    "tax": 5.12,
+    "pps": 145
   },
-  "WI": {
-    "pps": 195,
-    "tax": 5
+  "wisconsin": {
+    "closing": 1.9,
+    "tax": 5.0,
+    "pps": 195
   },
-  "WY": {
-    "pps": 210,
-    "tax": 0
+  "wyoming": {
+    "closing": 1.7,
+    "tax": 0.0,
+    "pps": 210
   }
 }
