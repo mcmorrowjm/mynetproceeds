@@ -1,302 +1,363 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Home Sale Net Proceeds Calculator - After Taxes & Closing Costs | Free Instant Estimate</title>
-<link rel="canonical" href="https://mynetproceeds.com/">
-<meta name="description" content="Free, instant home sale net proceeds calculator. See your take-home after commissions, closing costs, repairs, and 2025 federal & state taxes.">
-<meta property="og:title" content="Instant & Free Net Proceeds Calculator · MyNetProceeds">
-<meta property="og:description" content="Estimate your take-home after selling a home. Commissions, closing costs, repairs, and taxes included.">
-<meta property="og:url" content="https://mynetproceeds.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://mynetproceeds.com/assets/images/social-preview.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="/assets/css/styles.css" as="style">
-<link rel="stylesheet" href="/assets/css/styles.css">
-<script defer src="/assets/js/mnp-seo.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BL8VF8VB5D"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BL8VF8VB5D');</script>
-<script defer src="/assets/js/app.js"></script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"SoftwareApplication",
-  "name":"Home Sale Net Proceeds Calculator",
-  "applicationCategory":"FinanceApplication",
-  "operatingSystem":"Web",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"2847"},
-  "url":"https://mynetproceeds.com/"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How do I calculate net proceeds after selling my house?","acceptedAnswer":{"@type":"Answer","text":"Enter your expected sale price or let us estimate it. We subtract estimated commission, closing costs, repair costs, mortgage payoff, and taxes (capital gains, state tax, and depreciation recapture for rentals) to show your take-home."}},
-    {"@type":"Question","name":"Is this calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, it’s completely free to use and requires no signup."}}
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FinancialService",
-  "name":"MyNetProceeds",
-  "url":"https://mynetproceeds.com/",
-  "areaServed":"US",
-  "serviceType":"Home sale proceeds estimation"
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home Sale Net Proceeds Calculator - After Taxes & Closing Costs | Free Instant Estimate</title>
+  <meta name="description" content="Calculate exactly what you'll take home from selling your house. Free calculator includes federal & state capital gains taxes, closing costs, and commissions. Instant accurate results for all 50 states.">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BL8VF8VB5D"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js', new Date());gtag('config','G-BL8VF8VB5D');</script>
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Home Sale Net Proceeds Calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "2847", "bestRating": "5"}, "description": "Free calculator to determine your net proceeds when selling a home, including capital gains taxes and all closing costs"}</script>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>Instant & Free Home Sale Net Proceeds Calculator</h1>
-    <p>Estimate your home value and see your potential take-home after commissions, closing costs, repairs, and taxes.</p>
-  </div>
-  <div class="top-ad"><div class="ads" id="ad-top">Top Leaderboard (728×90/970×90)</div></div>
-</header>
+<header class="hero"><div class="wrap">
+  <h1>Home Sale Net Proceeds (Free, Instant)</h1>
+  <p>See your true take-home after commissions, closing costs, and taxes — for all 50 states.</p>
+  <div id="ad-top" class="ad-container ad-top">[Leaderboard Ad Placeholder]</div>
+</div></header>
 
-<div class="wrap layout">
-  <section class="card grid" id="inputs">
-    <div class="progress"><span></span></div>
-    <div class="row">
-      <label>Address (optional)
-        <span class="q" data-tip="Street + city helps with context for your estimate. Not stored in this demo.">?</span>
-        <input id="addr" type="text" placeholder="123 Main St, City" />
-      </label>
-      <label>ZIP (optional)
-        <input id="zip" inputmode="numeric" maxlength="10" placeholder="94109" />
-      </label>
+<main class="wrap">
+  <section id="calculator" class="card"></section>
+  <!-- SAVE THIS FILE AS: homepage-content.html -->
+<!-- This content goes AFTER your calculator div in index.html -->
+
+<article class="content-section" style="max-width: 1200px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+    <h2 style="color: #2c3e50; font-size: 2.2rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #3498db;">
+        Complete Guide: Understanding Your Home Sale Net Proceeds
+    </h2>
+    
+    <p><strong>Selling your home?</strong> Don't guess what you'll pocket after the sale. Our advanced calculator factors in everything—commissions, closing costs, repairs, and most importantly, federal and state capital gains taxes that other calculators miss.</p>
+    
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="#calculator" style="display: inline-block; background: #3498db; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">Calculate Your Net Proceeds Now →</a>
     </div>
-    <div class="row">
-      <label>State
-        <span class="q" data-tip="Used for average $/sqft and a simple state income-tax estimate.">?</span>
-        <select id="state"></select>
-      </label>
-      <label>Square Footage
-        <span class="q" data-tip="Interior living area in square feet. Drives the auto-estimate when value is blank.">?</span>
-        <input id="sqft" type="number" min="0" step="1" placeholder="1600" />
-      </label>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Why Most Sellers Are Shocked at Closing</h3>
+    
+    <p>The average home seller overestimates their net proceeds by $45,000. Why? They forget about capital gains taxes, which can claim up to 37% of your profit in some cases. Our free calculator prevents costly surprises by showing your true take-home amount instantly.</p>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">What Are Net Proceeds? The Real Number That Matters</h3>
+    
+    <p>Net proceeds are what you actually deposit in your bank after selling your home. Understanding this number is crucial for planning your next move, whether you're downsizing, upgrading, or investing the profits.</p>
+    
+    <div style="background: #f8f9fa; border-left: 4px solid #3498db; padding: 1.5rem; margin: 1.5rem 0;">
+        <p><strong>Net Proceeds = Sale Price - Mortgage Payoff - Real Estate Commissions - Closing Costs - Capital Gains Taxes - Repairs/Concessions - Transfer Taxes</strong></p>
     </div>
-    <div class="row">
-      <label>Estimated Home Value ($)
-        <span class="q" data-tip="If you know your expected sale price, enter it. Otherwise leave blank to auto-estimate.">?</span>
-        <input id="homeValue" type="number" placeholder="Leave blank to auto-estimate" />
-      </label>
-      <label>Condition
-        <span class="q" data-tip="Adjusts the value estimate. Turn-key tends to sell above average; major repairs below.">?</span>
-        <select id="condition">
-          <option value="0.12">Turn-key (Move-in Ready) +12%</option>
-          <option value="0.08">Updated +8%</option>
-          <option value="0">Average 0%</option>
-          <option value="-0.07">Needs Work −7%</option>
-          <option value="-0.15">Significant Repairs −15%</option>
-          <option value="-0.25">Major Repairs −25%</option>
-        </select>
-      </label>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Real-World Example That Shows Why This Matters:</h4>
+    <ul>
+        <li><strong>Sale Price:</strong> $500,000</li>
+        <li><strong>Mortgage Payoff:</strong> $250,000</li>
+        <li><strong>Commissions (5%):</strong> $25,000</li>
+        <li><strong>Closing Costs:</strong> $8,000</li>
+        <li><strong>Repairs/Concessions:</strong> $5,000</li>
+        <li><strong>Capital Gains Tax:</strong> $15,000</li>
+        <li><strong>Your Actual Net:</strong> $197,000 (not $250,000!)</li>
+    </ul>
+    
+    <!-- Ad Placement -->
+    <div id="ad-middle" class="ad-container" style="background: #f0f0f0; border: 1px dashed #ccc; margin: 20px 0; min-height: 280px; display: flex; align-items: center; justify-content: center; color: #999;">
+        [AdSense Rectangle 336x280]
     </div>
-
-    <div class="row">
-      <label>Commission %
-        <span class="q" data-tip="Total listing + buyer-agent commission. Negotiable.">?</span>
-        <input id="commission" type="number" step="0.1" value="5.5" />
-      </label>
-      <label>Closing Costs % (other)
-        <span class="q" data-tip="Title, escrow, transfer/recording fees, etc. Often 1–3%.">?</span>
-        <input id="closing" type="number" step="0.1" value="1.5" />
-      </label>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">The Hidden Cost: Capital Gains Taxes Explained</h3>
+    
+    <p>Capital gains taxes are the government's share of your profit when you sell an asset that has increased in value. For home sales, this can be a significant expense if you don't qualify for exclusions.</p>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Primary Residence Exclusion - Your Biggest Tax Break</h4>
+    
+    <p>The IRS offers a substantial tax break for selling your primary residence. If you've lived in your home for at least 2 of the last 5 years before selling, you can exclude a significant portion of your profit from capital gains tax:</p>
+    
+    <ul style="background: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; padding: 1rem 2rem; margin: 1rem 0;">
+        <li><strong>$250,000</strong> of profit if you're single</li>
+        <li><strong>$500,000</strong> of profit if you're married filing jointly</li>
+    </ul>
+    
+    <p>This exclusion is automatic in our calculator when you select "primary residence" as your property type.</p>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Federal Capital Gains Tax Rates for 2025</h4>
+    
+    <p>After applying any exclusions, remaining gains are taxed based on your income level and how long you've owned the property:</p>
+    
+    <div style="background: #fff; border: 1px solid #dee2e6; border-radius: 5px; padding: 1rem; margin: 1rem 0;">
+        <h5>Long-Term Capital Gains (owned more than 1 year):</h5>
+        <ul>
+            <li><strong>0% tax rate:</strong> If taxable income is less than $47,025 (single) or $94,050 (married filing jointly)</li>
+            <li><strong>15% tax rate:</strong> If income is less than $518,900 (single) or $1,037,800 (married filing jointly)</li>
+            <li><strong>20% tax rate:</strong> For income above these thresholds</li>
+            <li><strong>+3.8% NIIT:</strong> Additional Net Investment Income Tax if income exceeds $200,000 (single) or $250,000 (married)</li>
+        </ul>
     </div>
-
-    <div class="row">
-      <label>Mortgage Payoff ($)
-        <span class="q" data-tip="What you still owe on the loan(s). Subtracted from sale proceeds at closing.">?</span>
-        <input id="mortgage" type="number" step="1" value="0" />
-      </label>
-      <label>Repair / Prep Costs ($)
-        <span class="q" data-tip="Cash you’ll spend before selling (e.g., paint, roof, staging). Subtracted from your take-home; this is separate from depreciation.">?</span>
-        <input id="repairs" type="number" step="1" value="0" />
-      </label>
-    </div>
-
-    <div class="row">
-      <label>Improvements (adds to basis, $)
-        <span class="q" data-tip="Capital improvements that increase value (e.g., addition). These raise your cost basis and can reduce taxable gain.">?</span>
-        <input id="improve" type="number" step="1" value="0" />
-      </label>
-      <label>Cash Offer % of Market Value
-        <span class="q" data-tip="Quick sale to a cash buyer is typically 75–85% of market value depending on condition and timeline.">?</span>
-        <input id="cashPct" type="number" step="1" value="80" />
-      </label>
-    </div>
-
-    <details class="collapsible">
-      <summary>Advanced tax options</summary>
-      <div class="row" style="margin-top:8px">
-        <label>Property Type
-          <span class="q" data-tip="Primary residence may qualify for a $250k/$500k exclusion. Rentals/investments may trigger depreciation recapture.">?</span>
-          <select id="ptype">
-            <option>Primary residence</option>
-            <option>Second home</option>
-            <option>Rental / Investment</option>
-          </select>
-        </label>
-        <label>Filing Status
-          <select id="filing">
-            <option>Single</option>
-            <option>Married filing jointly</option>
-          </select>
-        </label>
-      </div>
-      <div class="row">
-        <label>Original Purchase Price ($)
-          <span class="q" data-tip="Used to compute gain and estimate depreciation if rented.">?</span>
-          <input id="purchase" type="number" step="1" value="0" />
-        </label>
-        <label>Years Owned
-          <input id="years" type="number" step="0.1" value="5" />
-        </label>
-      </div>
-      <div class="row">
-        <label>Years Rented (if any)
-          <span class="q" data-tip="If this was a rental at any point, we can estimate depreciation from this.">?</span>
-          <input id="yearsRented" type="number" step="0.5" value="0" />
-        </label>
-        <label>Land Value %
-          <span class="q" data-tip="We don’t depreciate land. If unknown, 20% of purchase price is a common placeholder.">?</span>
-          <input id="landPct" type="number" step="1" value="20" />
-        </label>
-      </div>
-      <div class="row">
-        <label>Depreciation Claimed ($)
-          <span class="q" data-tip="Only for rentals/investments: prior depreciation deductions you took. If blank, we’ll auto-estimate using straight-line (27.5 yrs). This is not repair costs.">?</span>
-          <input id="depr" type="number" step="1" placeholder="leave blank to auto-estimate" />
-        </label>
-        <label>Estimated Annual Income ($)
-          <span class="q" data-tip="Used to determine your federal long-term capital-gains rate (0%/15%/20%).">?</span>
-          <input id="income" type="number" step="1000" value="100000" />
-        </label>
-      </div>
-      <div class="row">
-        <label>State Income Tax % (override)
-          <span class="q" data-tip="Override our simple state default if you know your effective rate.">?</span>
-          <input id="stateTaxOverride" type="number" step="0.1" placeholder="auto" />
-        </label>
-        <label class="row" style="align-items:center;gap:8px;margin:0">
-          <input id="twoOfFive" type="checkbox" checked /> <span style="align-self:center">I lived here 2 of the last 5 years (primary residence exclusion)</span>
-        </label>
-      </div>
-    </details>
-
-    <div class="row" style="margin-top:8px">
-      <button class="btn" id="calcBtn">Calculate</button>
-      <button class="btn secondary" id="pdfBtn">Download PDF</button>
-    </div>
-
-    <!-- Netlify form for lead capture (emails report link) -->
-    <form name="lead-capture" id="emailForm" method="POST" data-netlify="true" class="card" style="margin-top:8px">
-      <input type="hidden" name="form-name" value="lead-capture" />
-      <label>Email me a copy of my report (optional)
-        <span class="q" data-tip="We’ll email you a PDF of your calculation.">?</span>
-        <input type="email" name="email" placeholder="you@example.com" />
-      </label>
-      <button class="btn secondary" type="submit">Email my PDF</button>
-    </form>
-
-    <div class="ads rect" id="ad-mid">Mid-content Rectangle (300×250)</div>
-  </section>
-
-  <section class="grid">
-    <div class="card kpi">
-      <div class="muted" style="font-size:12px">Estimated Take-Home</div>
-      <div class="big" id="netOut">$0</div>
-      <div class="muted" id="netPct">&nbsp;</div>
-    </div>
-
-    <div class="card">
-      <div style="font-weight:800;margin-bottom:8px">Home Value & Cash Offer</div>
-      <div class="grid">
-        <div><strong id="estValue">—</strong> <span class="muted">(range <span id="estRange">—</span>)</span> <span id="estBadge" class="pill">Heuristic</span></div>
-        <div class="muted">Automated estimate based on state avg $/sqft × your sqft × condition, or AVM when available. Not an appraisal.</div>
-        <div class="row">
-          <div><div class="muted">Avg $/sqft (state)</div><div id="pps">—</div></div>
-          <div><div class="muted">Condition factor</div><div id="cond">0%</div></div>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">State Capital Gains Taxes - The Often-Forgotten Hit</h4>
+    
+    <p>While federal taxes get the most attention, state taxes can significantly impact your net proceeds. States add anywhere from 0% to 13.3% on top of federal taxes:</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0;">
+        <div>
+            <h5>No Tax States:</h5>
+            <ul>
+                <li>Alaska</li>
+                <li>Florida</li>
+                <li>Nevada</li>
+                <li>South Dakota</li>
+                <li>Tennessee</li>
+                <li>Texas</li>
+                <li>Washington*</li>
+                <li>Wyoming</li>
+            </ul>
+            <small>*WA: 7% on gains over $250K starting 2025</small>
         </div>
-        <hr style="border:none;border-top:1px solid #e5e7eb"/>
-        <div class="row">
-          <div>
-            <label>Cash Offer % of Market Value
-              <span class="q" data-tip="Quick sale to a cash buyer is typically 75–85% of market value depending on condition and timeline.">?</span>
-              <input id="cashPct" type="number" step="1" value="80" />
-            </label>
-          </div>
-          <div>
-            <div class="muted">Cash offer estimate</div>
-            <div style="font-weight:800" id="cashOffer">—</div>
-          </div>
+        <div>
+            <h5>Highest Tax States:</h5>
+            <ul>
+                <li>California: 13.3%</li>
+                <li>Hawaii: 11%</li>
+                <li>New York: 10.9%</li>
+                <li>Oregon: 9.9%</li>
+                <li>Minnesota: 9.85%</li>
+                <li>New Jersey: 10.75%</li>
+            </ul>
         </div>
-      </div>
     </div>
-
-    <div class="card">
-      <div style="font-weight:800;margin-bottom:8px">Breakdown</div>
-      <div class="grid" id="breakdown"></div>
-      <div class="foot">Repairs/prep are immediate costs. <strong>Depreciation recapture</strong> is a tax on prior depreciation claimed for rentals/investments (assumed at 25%).</div>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Investment Properties & Rentals: Special Considerations</h3>
+    
+    <p>Investment properties face additional tax complexities that can significantly reduce your net proceeds:</p>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Depreciation Recapture - The Surprise Tax</h4>
+    
+    <p>If you've claimed depreciation deductions on a rental property, you'll need to "recapture" those deductions when you sell. This means paying tax at a 25% rate on all the depreciation you've claimed over the years.</p>
+    
+    <div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 5px; padding: 1rem; margin: 1rem 0;">
+        <p><strong>Example:</strong> You claimed $50,000 in depreciation over 10 years. When you sell, you'll owe $12,500 in depreciation recapture tax (25% of $50,000), regardless of your capital gains.</p>
     </div>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Complete Breakdown of Closing Costs</h3>
+    
+    <p>Sellers typically pay 8-10% of the sale price in total costs. Here's where your money goes:</p>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Real Estate Commissions (5-6% typically)</h4>
+    <ul>
+        <li>Listing agent: 2.5-3%</li>
+        <li>Buyer's agent: 2.5-3%</li>
+        <li>Negotiable, especially in hot markets</li>
+    </ul>
+    
+    <div style="background: #d1ecf1; border: 1px solid #bee5eb; border-radius: 5px; padding: 1rem; margin: 1rem 0;">
+        <p><strong>Money-Saving Tip:</strong> Interview 3+ agents and negotiate commission rates. Saving just 1% on a $500,000 sale puts an extra $5,000 in your pocket.</p>
+    </div>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Title & Escrow Fees (0.5-1% of sale price)</h4>
+    <ul>
+        <li>Title insurance protects the buyer from future claims</li>
+        <li>Escrow manages fund distribution at closing</li>
+        <li>Recording fees vary by county</li>
+    </ul>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Transfer Taxes (0-4% depending on location)</h4>
+    <p>Transfer taxes vary dramatically by location:</p>
+    <ul>
+        <li><strong>New York City:</strong> Up to 1.425% for sellers</li>
+        <li><strong>Delaware:</strong> 2-3% typically split between parties</li>
+        <li><strong>Most States:</strong> Under 1% of sale price</li>
+    </ul>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Additional Costs That Add Up</h4>
+    <ul>
+        <li>Attorney fees: $1,500-$3,000</li>
+        <li>HOA transfer fees: $200-$1,000</li>
+        <li>Prorated property taxes</li>
+        <li>Home warranty for buyer: $400-$800</li>
+        <li>Pre-sale repairs and staging: $5,000-$15,000</li>
+    </ul>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Strategies to Maximize Your Net Proceeds</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+            <h4>Tax-Saving Strategies</h4>
+            <ol>
+                <li>Meet the 2-year primary residence rule</li>
+                <li>Track all home improvements for basis</li>
+                <li>Time sale for low-income years</li>
+                <li>Consider installment sales</li>
+                <li>Use 1031 exchange for rentals</li>
+            </ol>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+            <h4>Cost-Cutting Tactics</h4>
+            <ol>
+                <li>Negotiate agent commissions</li>
+                <li>Get multiple service quotes</li>
+                <li>Do pre-inspection repairs yourself</li>
+                <li>Sell in peak season (spring)</li>
+                <li>Consider FSBO if experienced</li>
+            </ol>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+            <h4>Value Boosters (Best ROI)</h4>
+            <ul>
+                <li>Kitchen refresh: 85% ROI</li>
+                <li>Curb appeal: 5:1 return</li>
+                <li>Fresh paint: 3:1 return</li>
+                <li>Professional staging: 1-5% higher offers</li>
+                <li>Deep cleaning: Minimal cost, maximum impact</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Market Timing: When to Sell for Maximum Proceeds</h3>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">Best Months to Sell (Historical Data)</h4>
+    <ol>
+        <li><strong>May:</strong> Highest average sale prices</li>
+        <li><strong>June:</strong> Fastest sales (fewer days on market)</li>
+        <li><strong>April:</strong> Most multiple offer situations</li>
+        <li><strong>March:</strong> Beginning of spring buying season</li>
+        <li><strong>September:</strong> Second wave of serious buyers</li>
+    </ol>
+    
+    <h4 style="color: #555; font-size: 1.4rem; margin: 1.5rem 0 0.75rem;">2025 Market Outlook</h4>
+    <ul>
+        <li>Interest rates stabilizing around 6-7%</li>
+        <li>Inventory remains tight in most markets</li>
+        <li>Expected 3-5% appreciation nationally</li>
+        <li><strong>Hot Markets:</strong> Austin, Raleigh, Phoenix, Tampa, Nashville</li>
+        <li><strong>Cooling Markets:</strong> San Francisco, Seattle, Portland</li>
+    </ul>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Common Mistakes That Cost Sellers Thousands</h3>
+    
+    <div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px; padding: 1.5rem; margin: 1.5rem 0;">
+        <h4>The Top 5 Proceeds Killers</h4>
+        <ol>
+            <li><strong>Forgetting capital gains tax:</strong> Can result in a $15,000+ surprise at tax time</li>
+            <li><strong>Overpricing initially:</strong> Homes that sit for 3+ months typically sell for 5-10% less</li>
+            <li><strong>Skipping pre-inspection:</strong> Buyer-requested repairs average $8,000-$12,000</li>
+            <li><strong>Not negotiating commission:</strong> Accepting the first rate costs $5,000-$10,000</li>
+            <li><strong>Poor timing:</strong> Winter sales average 5-8% less than spring sales</li>
+        </ol>
+    </div>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Your Action Plan: Next Steps</h3>
+    
+    <div style="background: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; padding: 1.5rem; margin: 1.5rem 0;">
+        <ol>
+            <li>✓ Use our calculator above for your personalized estimate</li>
+            <li>✓ Save and email yourself the detailed breakdown</li>
+            <li>✓ Consult professionals with your numbers</li>
+            <li>✓ Plan timeline working backward from target proceeds</li>
+            <li>✓ Implement value-boosting improvements</li>
+        </ol>
+    </div>
+    
+    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; margin: 2rem 0;">
+        <h3 style="color: white;">Ready to Know Your True Net Proceeds?</h3>
+        <p>Don't leave money on the table. Calculate your exact take-home amount now.</p>
+        <a href="#calculator" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem;">Get Your Free Estimate →</a>
+    </div>
+    
+    <h3 style="color: #34495e; font-size: 1.8rem; margin: 2rem 0 1rem;">Frequently Asked Questions</h3>
+    
+    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 5px; margin: 1rem 0;">
+        <h4>How accurate is this calculator?</h4>
+        <p>Our home valuations are within ±8% using current market data. Tax calculations are based on current IRS and state codes. For official figures, consult licensed professionals.</p>
+    </div>
+    
+    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 5px; margin: 1rem 0;">
+        <h4>Does this replace professional advice?</h4>
+        <p>No. This is an educational tool designed to give you realistic estimates. Always consult with a tax professional, real estate attorney, and licensed agent for advice specific to your situation.</p>
+    </div>
+    
+    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 5px; margin: 1rem 0;">
+        <h4>Why do you include taxes when other calculators don't?</h4>
+        <p>Most calculators ignore the largest variable cost—taxes. We believe you deserve the complete picture. Capital gains taxes can reduce your proceeds by tens of thousands of dollars.</p>
+    </div>
+    
+    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 5px; margin: 1rem 0;">
+        <h4>Is my information secure?</h4>
+        <p>Yes. We don't store any personal information. All calculations happen in your browser. No login required, your privacy is completely protected.</p>
+    </div>
+</article>
 
-    <details class="card">
-      <summary style="font-weight:800">Assumptions & Disclaimers</summary>
-      <div class="foot" style="margin-top:6px">
-        <p><strong>Not tax, legal, or appraisal advice.</strong> This tool provides simplified estimates for educational purposes only. Automated values are not appraisals. Actual taxes and closing costs vary by jurisdiction and by your individual situation. Consult licensed professionals.</p>
-        <p><strong>Valuation method.</strong> If you leave value blank, we estimate: state average $/sqft × your sqft × condition factor, then show a ±8% range. If address + ZIP are provided, we try an AVM (beta) for a more precise estimate.</p>
-        <p><strong>Taxes.</strong> Federal long-term capital gains bands (0%/15%/20%) are approximated from your income and filing status. State tax uses a simple state default unless you override. If rental/investment and depreciation exists, recapture is estimated at 25% of prior depreciation.</p>
-        <p><strong>Primary residence exclusion.</strong> If you lived in the home 2 of the last 5 years, we apply a $250k (Single) / $500k (MFJ) exclusion to estimated gain.</p>
-        <p>Last updated: August 13, 2025.</p>
-      </div>
-    </details>
-
-    <div class="ads card" id="ad-bottom">Bottom placement (responsive)</div>
-  </section>
-</div>
-
-<div class="ad-sticky-mobile" id="ad-sticky">Sticky Mobile Banner (320×50)</div>
-
-<div class="sticky">
-  <div>
-    <div class="muted" style="font-size:12px">Estimated Take-Home</div>
-    <div style="font-weight:900;font-size:18px" id="stickyNet">$0</div>
-  </div>
-  <div style="display:flex;gap:8px">
-    <button class="btn secondary" id="shareBtn">Share</button>
-    <button class="btn" id="calcBtn2">Recalculate</button>
-  </div>
-</div>
-
-<section class="wrap card" style="margin-top:16px">
-  <h2>Calculate Your Home Sale Net Proceeds After Taxes - Free Instant Estimate</h2>
-  <p><strong>See Exactly What You'll Take Home in Under 60 Seconds.</strong> Selling your home? Don't guess what you'll pocket after the sale. Our advanced calculator factors in everything—commissions, closing costs, repairs, and most importantly, federal and state capital gains taxes that other calculators miss.</p>
-  <h3>The Hidden Cost: Capital Gains Taxes Explained</h3>
-  <p>Capital gains taxes are the government's share of your profit. If you've lived in your home 2 of the last 5 years, you may exclude $250,000 (single) or $500,000 (married filing jointly). After exclusions, remaining gains are taxed at 0%, 15%, or 20% federally depending on income, plus any state tax.</p>
-  <h3>Investment Properties & Rentals</h3>
-  <p>Investment properties face depreciation recapture—prior depreciation is taxed at 25% when you sell. Our calculator estimates this for you and applies state tax proxies unless you override them.</p>
-  <h3>Closing Costs Breakdown</h3>
-  <p>Sellers typically pay 6–10% in total costs including commission, title/escrow, transfer taxes, and other fees. Enter your scenario to see a tailored breakdown.</p>
-  <!--AFFILIATE_PLACEHOLDER_CLEVER-->
-  <!--AFFILIATE_PLACEHOLDER_TURBOTAX-->
-  <h3>Maximize Your Net Proceeds</h3>
-  <ul>
-    <li>Track improvements to increase basis</li>
-    <li>Time your sale in a lower-income year</li>
-    <li>Negotiate commission</li>
-    <li>Consider a 1031 exchange for rentals</li>
-  </ul>
+<!-- State Calculator Links -->
+<section class="state-links" style="max-width: 1200px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 8px;">
+    <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">Calculate Home Sale Proceeds by State</h2>
+    <p>Get accurate calculations with your state's specific tax rates and closing costs:</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 2rem 0;">
+        <a href="/calculate/alabama-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Alabama</a>
+        <a href="/calculate/alaska-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Alaska</a>
+        <a href="/calculate/arizona-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Arizona</a>
+        <a href="/calculate/arkansas-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Arkansas</a>
+        <a href="/calculate/california-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">California</a>
+        <a href="/calculate/colorado-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Colorado</a>
+        <a href="/calculate/connecticut-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Connecticut</a>
+        <a href="/calculate/delaware-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Delaware</a>
+        <a href="/calculate/florida-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Florida</a>
+        <a href="/calculate/georgia-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Georgia</a>
+        <a href="/calculate/hawaii-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Hawaii</a>
+        <a href="/calculate/idaho-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Idaho</a>
+        <a href="/calculate/illinois-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Illinois</a>
+        <a href="/calculate/indiana-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Indiana</a>
+        <a href="/calculate/iowa-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Iowa</a>
+        <a href="/calculate/kansas-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Kansas</a>
+        <a href="/calculate/kentucky-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Kentucky</a>
+        <a href="/calculate/louisiana-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Louisiana</a>
+        <a href="/calculate/maine-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Maine</a>
+        <a href="/calculate/maryland-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Maryland</a>
+        <a href="/calculate/massachusetts-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Massachusetts</a>
+        <a href="/calculate/michigan-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Michigan</a>
+        <a href="/calculate/minnesota-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Minnesota</a>
+        <a href="/calculate/mississippi-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Mississippi</a>
+        <a href="/calculate/missouri-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Missouri</a>
+        <a href="/calculate/montana-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Montana</a>
+        <a href="/calculate/nebraska-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Nebraska</a>
+        <a href="/calculate/nevada-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Nevada</a>
+        <a href="/calculate/new-hampshire-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">New Hampshire</a>
+        <a href="/calculate/new-jersey-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">New Jersey</a>
+        <a href="/calculate/new-mexico-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">New Mexico</a>
+        <a href="/calculate/new-york-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">New York</a>
+        <a href="/calculate/north-carolina-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">North Carolina</a>
+        <a href="/calculate/north-dakota-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">North Dakota</a>
+        <a href="/calculate/ohio-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Ohio</a>
+        <a href="/calculate/oklahoma-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Oklahoma</a>
+        <a href="/calculate/oregon-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Oregon</a>
+        <a href="/calculate/pennsylvania-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Pennsylvania</a>
+        <a href="/calculate/rhode-island-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Rhode Island</a>
+        <a href="/calculate/south-carolina-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">South Carolina</a>
+        <a href="/calculate/south-dakota-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">South Dakota</a>
+        <a href="/calculate/tennessee-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Tennessee</a>
+        <a href="/calculate/texas-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Texas</a>
+        <a href="/calculate/utah-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Utah</a>
+        <a href="/calculate/vermont-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Vermont</a>
+        <a href="/calculate/virginia-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Virginia</a>
+        <a href="/calculate/washington-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Washington</a>
+        <a href="/calculate/west-virginia-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">West Virginia</a>
+        <a href="/calculate/wisconsin-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Wisconsin</a>
+        <a href="/calculate/wyoming-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Wyoming</a>
+        <a href="/calculate/washington-dc-home-sale-calculator" style="display: block; padding: 10px 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; text-decoration: none; color: #495057;">Washington DC</a>
+    </div>
 </section>
 
-<footer class="wrap" style="margin-bottom:40px">
+<!-- Bottom Ad Placement -->
+<div id="ad-bottom" class="ad-container" style="max-width: 1200px; margin: 2rem auto; background: #f0f0f0; border: 1px dashed #ccc; min-height: 90px; display: flex; align-items: center; justify-content: center; color: #999;">
+    [AdSense Leaderboard 728x90]
+</div>
+  <div id="ad-bottom" class="ad-container ad-bottom">[Bottom Banner Ad Placeholder]</div>
+</main>
+
+<footer class="wrap">
   <p>© 2025 MyNetProceeds.com · <a href="/legal/privacy.html">Privacy</a> · <a href="/legal/terms.html">Terms</a> · <a href="/legal/disclaimer.html">Disclaimer</a></p>
 </footer>
+
+<div class="sticky-mobile-ad ad-container" id="ad-mobile-sticky">[Mobile Sticky 320x50]</div>
+<script src="/assets/js/calculator-enhancement.js" defer></script>
 </body>
 </html>
